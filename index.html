@@ -3,11 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header .current a {
+            color: #77aaff;
+        }
+        header .branding {
+            float: left;
+        }
+        header .branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('your-photo-url.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .nav-link {
+            cursor: pointer;
+        }
+        section {
+            padding: 20px 0;
+            border-bottom: #77aaff 1px solid;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        #contact {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        #contact h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is my data science portfolio.</p>
+    <header>
+        <div class="container">
+            <div class="branding">
+                <h1>Your Name</h1>
+                <p>Data Analyst</p>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a class="nav-link" onclick="scrollToSection('showcase')">Home</a></li>
+                    <li><a class="nav-link" onclick="scrollToSection('projects')">Projects</a></li>
+                    <li><a class="nav-link" onclick="scrollToSection('experience')">Experience</a></li>
+                    <li><a class="nav-link" onclick="scrollToSection('certifications')">Certifications</a></li>
+                    <li><a class="nav-link" onclick="scrollToSection('academics')">Academics</a></li>
+                    <li><a class="nav-link" onclick="scrollToSection('contact')">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Data Analyst | Problem Solver | Insight Finder</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <p>Details about your projects go here...</p>
+    </section>
+
+    <section id="experience" class="container">
+        <h2>Experience</h2>
+        <p>Details about your experience go here...</p>
+    </section>
+
+    <section id="certifications" class="container">
+        <h2>Certifications</h2>
+        <p>Details about your certifications go here...</p>
+    </section>
+
+    <section id="academics" class="container">
+        <h2>Academics</h2>
+        <p>Details about your academic background go here...</p>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>Email: your.email@example.com</p>
+            <p>LinkedIn: <a href="your-linkedin-url" target="_blank">Your LinkedIn</a></p>
+        </div>
+    </section>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
